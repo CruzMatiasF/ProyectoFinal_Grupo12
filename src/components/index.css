@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 400px;
+}
+
+h1 {
+  text-align: center;
+  background: #700303;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  width: 300px;
+  height: 50px;
+  padding: 2px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+  margin-right: 5px;
+}
+
+
+.botonColaboradores {
+    display: flex;
+justify-content: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 1.3em 1em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 100px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  .botonColaboradores:hover {
+    background-color: #000000;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  .botonJugar {
+    display: flex;
+    justify-content: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .botonJugar:hover {
+    background-color: #000000;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+
+.ImagenColaborador{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    }
+    .Edad{
+      color:brown;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      width: 300px;
+      height: 5px;
+      font-size: 180%;
+    }
+    .Descripcion{
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-align: center;
+      
+    }
+    .Parrafo{
+      color:brown;
+      text-align: center;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    .ahorcado{
+        text-align: center;
+    }
+    main{
+        width: 80%;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+    }
+    .imagenA{
+        width: 200px;
+        gap:30px;
+    }
+
+    #palabra_a_adivinar{
+        height: 3em;
+    }
+
+    #palabra_a_adivinar span{
+        vertical-align: bottom;
+        font-size: 2em ;
+        border-bottom: 2px solid black;
+        width: 30px;
+        text-align: center;
+        margin-right: 6px;
+        display: inline-block; /*sin esto, por ser un elemento de linea, no tomaria el ancho*/
+    }
+    #letras{
+        margin-top: 30px;
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+    }
+    #letras button{
+        width: 29px;
+        padding: 6px 0;
+        text-align: center;
+
+    }
+    body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+          monospace;
+      }
+      
