@@ -19,6 +19,10 @@ export default function Home() {
                     <li>
                         <Link to="Colaboradores" className="botonJugar">Colaboradores</Link>
                     </li>
+                    <li>
+                        <Link to="MasJuegos" className="botonJugar">Mas Juegos</Link>
+                    </li>
+
                 </ul>
             </nav></>
 
