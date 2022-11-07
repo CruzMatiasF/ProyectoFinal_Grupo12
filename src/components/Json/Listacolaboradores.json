@@ -1,11 +1,5 @@
 [ 
     {
-        "img": "./img/Guille.jpeg",
-        "Nombre": "Aprile Guillermo",
-        "Descripcion": "Soy el lider del grupo y me encargo que todo este correctamente hecho, corregir los errores y que todo este funcionando acorde al trabajo pedido."
-        
-    },
-    {
         "img": "./img/Matias.jpeg",
         "Nombre": "Cruz Matias",
         "Descripcion": "Como parte del grupo busco aplicar todos mis conocimientos y, al mismo tiempo adoro los retos y no me rindo fácilmente. Soy detallista y autodidacta cada día, nunca dejo de aprender."
