@@ -8,6 +8,12 @@ export default function OtrosJuegos() {
             <li>
                 <Link to="Arkanoid" className="botonJugar">Arkanoid</Link>
             </li>
+            <li>
+            <Link to="PiedraPapelTijera" className="botonJugar">Piedra, Papel o Tijeras</Link>
+            </li>
+            <li>
+            <Link to="Ahorcado" className="botonJugar">Ahorcado</Link>
+            </li>
 
         </ul>
     </nav>
