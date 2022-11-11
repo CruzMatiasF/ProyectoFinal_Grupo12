@@ -17,15 +17,14 @@ export default function Home() {
             </div><nav>
                 <ul>
                     <li>
-                        <Link to="Colaboradores" className="botonJugar">Colaboradores</Link>
+                        <Link to="/Colaboradores" className="botonJugar">Colaboradores</Link>
                     </li>
                     <li>
-                        <Link to="MasJuegos" className="botonJugar">Mas Juegos</Link>
+                        <Link to="/MasJuegos" className="botonJugar">Mas Juegos</Link>
                     </li>
                     <li>
                         <Link to="Arkanoid" className="botonJugar">Arkanoid</Link>
                     </li>
-
                 </ul>
             </nav></>
 
