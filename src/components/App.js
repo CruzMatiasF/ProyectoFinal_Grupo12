@@ -5,7 +5,7 @@ import "./App.css";
 import "./index.css";
 import Colaboradores from "./Colaboradores.js";
 import PaginaPrincipal from "./Paginaprincipal.js";
-import MasJuegos from "./Arkanoid.js";
+import MasJuegos from "./MasJuegos.js";
 import Arkanoid from "../Arkanoid/Juego.js"
 
 function App() {
