@@ -1,13 +1,12 @@
 import Phaser from "phaser";
 import {Scoreboard} from "./ScoreBoard.js";
 
-
-class Escena extends Phaser.Scene{ 
+class Nivel2 extends Phaser.Scene{
     constructor(config) {
-        super({ key : "Escena"});
+        super({ key : "Nivel2"});
 
         this.config=config; 
-        this.lvl1
+
     }
     //creamos un init para ver el puntaje del jugador
     init() {
@@ -42,9 +41,7 @@ class Escena extends Phaser.Scene{
             //esto vendria a ser los nombre de los ladrillos que elegimos
             key:["bluebrick","orangebrick","greenbrick","blackbrick"],
             //elegimos cuantos ladrillos van por fila, en este caso son 10 por fila
-
-            frameQuantity:5,
-
+            frameQuantity:10,
             gridAlign:{
                 //tiene un ancho
                 width:10,
@@ -159,6 +156,5 @@ class Escena extends Phaser.Scene{
     showCongratulations(){
         this.scene.start("congratulations");
     }
-    
-
-}export default Escena;
+}
+export default Nivel2;
