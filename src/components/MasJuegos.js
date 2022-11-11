@@ -5,25 +5,17 @@ import { Link } from "react-router-dom";
 export default function OtrosJuegos() {
     return (
         <><div className="principal">
-            <h1>ProjectoFinal</h1>
+            <h1>Mas Juegos</h1>
 
         </div><div className="imagen">
 
                 <img src={imagenJuego} alt="Juego" />
 
             </div><nav>
-                <ul>
-                    <li>
-                        <Link to="Colaboradores" className="botonJugar">Colaboradores</Link>
-                    </li>
-                    <li>
-                        <Link to="MasJuegos" className="botonJugar">Mas Juegos</Link>
-                    </li>
-                    <li>
-                        <Link to="Arkanoid" className="botonJugar">Arkanoid</Link>
-                    </li>
-
-                </ul>
+                <div>
+                        <Link to="/Arkanoid" className="botonJugar">Nivel 1</Link>
+                        <Link to="/Arkanoid2" className="botonJugar">Nivel 2</Link>
+                </div>
             </nav></>
     );
 }//<li><Link to="PiedraPapelTijera" className="botonJugar">Piedra, Papel o Tijeras</Link></li><li><Link to="Ahorcado" className="botonJugar">Ahorcado</Link></li>
