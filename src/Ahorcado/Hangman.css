@@ -1,0 +1,63 @@
+.Hangman {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.Boton {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.Boton:hover {
+  background-color: #000000;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.Reiniciar{
+  --glow-color: rgb(255, 0, 0);
+ --glow-spread-color: rgba(190, 19, 19);
+ --enhanced-glow-color: rgba(190, 19, 19);
+ --btn-color: rgba(255, 109, 109, 0.642);
+ border: .25em solid var(--glow-color);
+ padding: 1em 3em;
+ color: var(--glow-color);
+ font-size: 15px;
+ font-weight: bold;
+ background-color: var(--btn-color);
+ border-radius: 1em;
+ outline: none;
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+ text-shadow: 0 0 .5em var(--glow-color);
+ position: relative;
+ transition: all 0.3s;
+}
+
+ .Reiniciar:hover{
+
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   .Reiniciar:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
