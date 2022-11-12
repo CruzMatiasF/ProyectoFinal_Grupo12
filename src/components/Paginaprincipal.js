@@ -3,8 +3,6 @@ import "./index.css";
 import "./App.css";
 import { Link } from "react-router-dom";
 
-
-
 export default function Home() {
     return (
         <><div className="principal">
@@ -20,10 +18,13 @@ export default function Home() {
                         <Link to="/Colaboradores" className="botonJugar">Colaboradores</Link>
                     </li>
                     <li>
-                        <Link to="/MasJuegos" className="botonJugar">Mas Juegos</Link>
+                        <Link to="/MasJuegos" className="botonJugar">Arkanoid</Link>
                     </li>
                     <li>
-                        <Link to="Arkanoid" className="botonJugar">Arkanoid</Link>
+                        <Link to="/Ahorcado" className="botonJugar">Ahorcado</Link>
+                    </li>
+                    <li>
+                        <Link to="/PiedraPapelTijera" className="botonJugar">Piedra papel o tijera</Link>
                     </li>
                 </ul>
             </nav></>
