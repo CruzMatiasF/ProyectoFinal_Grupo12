@@ -9,8 +9,13 @@ import MasJuegos from "./MasJuegos.js";
 import Arkanoid from "../Arkanoid/Juego.js"
 import Arkanoid2 from "../Arkanoid/Juego2.js"
 import Ahorcado from "../Ahorcado/Ahorcado.js";
+
 import PiedraPapelTijera from "../PPT/Jugar.js";
+
+import PiedraPapelTijera from "../PPT/Jugar";
+
 import Snake from "../Snake/Snake.js";
+import Pong from "../Pong/Pong.js";
 
 
 function App() {
@@ -25,6 +30,7 @@ function App() {
                     <Route path="/Ahorcado" element={< Ahorcado/>}className='Inicio'/>;
                     <Route path="/PiedraPapelTijera" element={< PiedraPapelTijera/>}className='Inicio'/>;
                     <Route path="/Snake" element={< Snake/>}className='Inicio'/>;
+                    <Route path="/Pong" element={< Pong/>}className='Inicio'/>;
                 </Routes>
         </Container>
     );
