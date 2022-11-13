@@ -15,6 +15,9 @@ export default function Home() {
             </div><nav>
                 <ul>
                     <li>
+                        <Link to="/Snake" className="botonJugar">Snake</Link>
+                    </li>
+                    <li>
                         <Link to="/Colaboradores" className="botonJugar">Colaboradores</Link>
                     </li>
                     <li>

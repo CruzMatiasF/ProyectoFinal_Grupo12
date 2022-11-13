@@ -1,11 +1,11 @@
-import imagenJuego from "./imagen/tuki.jpg";
+import imagenJuego from "./imagen/Arkanoid.jpg";
 import "./index.css";
 import "./App.css";
 import { Link } from "react-router-dom";
 export default function OtrosJuegos() {
     return (
         <><div className="principal">
-            <h1>Mas Juegos</h1>
+            <h1>Arkanoid</h1>
 
         </div><div className="imagen">
 
