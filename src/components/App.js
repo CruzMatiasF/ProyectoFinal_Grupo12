@@ -9,7 +9,7 @@ import MasJuegos from "./MasJuegos.js";
 import Arkanoid from "../Arkanoid/Juego.js"
 import Arkanoid2 from "../Arkanoid/Juego2.js"
 import Ahorcado from "../Ahorcado/Ahorcado.js";
-import PiedraPapelTijera from "../PPT/Play.js";
+import PiedraPapelTijera from "../PPT/Jugar.js";
 import Snake from "../Snake/Snake.js";
 
 
