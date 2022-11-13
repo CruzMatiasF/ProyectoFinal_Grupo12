@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useInterval } from "./useInterval";
+import sonido03 from "../Ahorcado/sonidos/sonidoPerder.mp3";
+import sonido04 from "../Ahorcado/sonidos/sonidoClick.mp3";
 import {
   CANVAS_SIZE,
   SNAKE_START,
@@ -8,6 +10,7 @@ import {
   SPEED,
   DIRECTIONS
 } from "./constants";
+
 
 const App = () => {
   const canvasRef = useRef();
@@ -20,8 +23,9 @@ const App = () => {
   useInterval(() => gameLoop(), speed);
 
   const endGame = () => {
-    setSpeed(null);
+    setSpeed(null); // la serpiente deja de moverse
     setGameOver(true); // establece gameover a true
+    play(sonido03)
   };
 
   const moveSnake = ({ keyCode }) =>
@@ -42,20 +46,22 @@ const App = () => {
       return true;
 
     for (const segment of snk) {
-      if (piece[0] === segment[0] && piece[1] === segment[1]) return true; // si el snake toca su mismos cuerpo pierde
+      if (piece[0] === segment[0] && piece[1] === segment[1]) return true;
+       // si el snake toca su mismos cuerpo pierde
     }
     return false;
   };
 
-  const checkAppleCollision = newSnake => { // al colisionar con la manzana se agregara
+  const checkAppleCollision = newSnake => { 
     if (newSnake[0][0] === apple[0] && newSnake[0][1] === apple[1]) {
       // si la posicion newSnake es igual a la manzana
       let newApple = createApple(); 
       // se declara la nueva manzana y se le asigna el metodo
-      // while (checkCollision(newApple, newSnake)) {
-      //   newApple = createApple();
-      // }
+      while (checkCollision(newApple, newSnake)) {
+        newApple = createApple();
+      }
       setApple(newApple);
+      play(sonido04)
       return true;
     }
     return false;
@@ -70,7 +76,7 @@ const App = () => {
     setSnake(snakeCopy);
   };
 
-  const startGame = () => {
+  const startGame = () => { // esta funcion establecera
     setSnake(SNAKE_START);
     setApple(APPLE_START);
     setDir([0, -1]);
@@ -101,5 +107,9 @@ const App = () => {
     </div>
   );
 };
+function play(sonido) {
+  new Audio(sonido).play();
+}
+
 
 export default App;
