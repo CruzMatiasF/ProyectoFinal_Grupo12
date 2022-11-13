@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import {Scoreboard} from "./ScoreBoard.js";
-
+import sonido02 from "../Ahorcado/sonidos/sonidoGanar.mp3";
+import sonido03 from "../Ahorcado/sonidos/sonidoPerder.mp3";
 
 class Escena extends Phaser.Scene{ 
     constructor(config) {
@@ -154,11 +155,18 @@ class Escena extends Phaser.Scene{
     //esto nos mostrara cada vez que perdamos en el juego
     showGameOver(){
         this.scene.start("gameover");
+        play(sonido03)
     }
     //esto hara lo mismo pero cuando ganemos
     showCongratulations(){
         this.scene.start("congratulations");
+        play(sonido02)
     }
     
+}
 
-}export default Escena;
+function play(sonido) {
+    new Audio(sonido).play();
+  }
+
+export default Escena;

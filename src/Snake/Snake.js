@@ -11,8 +11,8 @@ import {
 
 const App = () => {
   const canvasRef = useRef();
-  const [snake, setSnake] = useState(SNAKE_START);
-  const [apple, setApple] = useState(APPLE_START);
+  const [snake, setSnake] = useState(SNAKE_START); // estado de la serpiente
+  const [apple, setApple] = useState(APPLE_START); // estado de la manzana
   const [dir, setDir] = useState([0, -1]);
   const [speed, setSpeed] = useState(null);
   const [gameOver, setGameOver] = useState(false);
@@ -21,7 +21,7 @@ const App = () => {
 
   const endGame = () => {
     setSpeed(null);
-    setGameOver(true);
+    setGameOver(true); // establece gameover a true
   };
 
   const moveSnake = ({ keyCode }) =>
@@ -29,6 +29,7 @@ const App = () => {
 
   const createApple = () =>
     apple.map((_a, i) => Math.floor(Math.random() * (CANVAS_SIZE[i] / SCALE)));
+    //LA manzana se creara en un rango aleatorio dentro del tamaño del mapa
 
   const checkCollision = (piece, snk = snake) => {
     if (
@@ -37,20 +38,23 @@ const App = () => {
       piece[1] * SCALE >= CANVAS_SIZE[1] ||
       piece[1] < 0
     )
+    // si el snake choca en el borde del marco pierde
       return true;
 
     for (const segment of snk) {
-      if (piece[0] === segment[0] && piece[1] === segment[1]) return true;
+      if (piece[0] === segment[0] && piece[1] === segment[1]) return true; // si el snake toca su mismos cuerpo pierde
     }
     return false;
   };
 
-  const checkAppleCollision = newSnake => {
+  const checkAppleCollision = newSnake => { // al colisionar con la manzana se agregara
     if (newSnake[0][0] === apple[0] && newSnake[0][1] === apple[1]) {
-      let newApple = createApple();
-      while (checkCollision(newApple, newSnake)) {
-        newApple = createApple();
-      }
+      // si la posicion newSnake es igual a la manzana
+      let newApple = createApple(); 
+      // se declara la nueva manzana y se le asigna el metodo
+      // while (checkCollision(newApple, newSnake)) {
+      //   newApple = createApple();
+      // }
       setApple(newApple);
       return true;
     }
