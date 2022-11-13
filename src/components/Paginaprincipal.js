@@ -18,7 +18,7 @@ export default function Home() {
                         <Link to="/Snake" className="botonJugar">Snake</Link>
                     </li>
                     <li>
-                        <Link to="/Colaboradores" className="botonJugar">Colaboradores</Link>
+                        <Link to="/Pong" className="botonJugar">Ping Pong</Link>
                     </li>
                     <li>
                         <Link to="/MasJuegos" className="botonJugar">Arkanoid</Link>
@@ -29,6 +29,10 @@ export default function Home() {
                     <li>
                         <Link to="/PiedraPapelTijera" className="botonJugar">Piedra papel o tijera</Link>
                     </li>
+                    <li>
+                        <Link to="/Colaboradores" className="botonJugar">Colaboradores</Link>
+                    </li>
+                    
                 </ul>
             </nav></>
 
