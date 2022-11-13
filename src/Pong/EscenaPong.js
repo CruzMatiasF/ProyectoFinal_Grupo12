@@ -19,6 +19,7 @@ class EscenaPong extends Phaser.Scene{
     pelota=null;
     
     preload(){ 
+        //cargamos las imagenes que vamos a usar
         this.load.image("fondo","img/fondo.png")
         this.load.image("pelota","img/pelota.png")
         this.load.image("izquierda","img/left_pallete.png");
@@ -28,32 +29,33 @@ class EscenaPong extends Phaser.Scene{
     }
     
     create() {
+        //
         let center_width = this.sys.game.config.width/2;
         let center_height = this.sys.game.config.height/2;
     
-        // Separador
+        // creamos el separador que va a estar en medio del juego
         this.add.image(center_width, center_height, "separador");
     
-        // Palas
+        //creamos las palas tanto izquierda como derecha
         this.izquierda = new Palas(this, 30, center_height, "izquierda");
         this.derecha = new Palas(this, this.sys.game.config.width-30, center_height, "derecha");
         
-        // bola
+        // creamos la posicion de la pelota
         this.physics.world.setBoundsCollision(false, false, true, true);
         this.ball = this.physics.add.image(center_width, center_height, "pelota");
         this.ball.setCollideWorldBounds(true);
         this.ball.setBounce(1);
         this.ball.setVelocityX(-180);
 
-        // Fisicas
+        // le añadimos las fisicas para que puedan colisionar la pelota y las palas
         this.physics.add.collider(this.ball, this.izquierda, this.chocaPala, null, this);
         this.physics.add.collider(this.ball, this.derecha, this.chocaPala, null, this);
 
         // Controles
-        // Pala derecha
+        // Creamos el movimiento de la pala derecha
         this.cursor = this.input.keyboard.createCursorKeys();
 
-        // Pala izquierda
+        // y de la misma forna la pala izquierda
         this.cursor_W = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.W);
         this.cursor_S = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
     }
@@ -64,7 +66,7 @@ class EscenaPong extends Phaser.Scene{
         
 
         // Control de las palas
-        // pala derecha
+        // que vaya hacia la derecha
         if(this.cursor.down.isDown) {
             this.derecha.body.setVelocityY(300);
         } else if(this.cursor.up.isDown) {
@@ -72,7 +74,7 @@ class EscenaPong extends Phaser.Scene{
         } else {
             this.derecha.body.setVelocityY(0);
         }
-        // Pala izquierda
+        // que vaya hacia la izquierda
         if(this.cursor_S.isDown) {
             this.izquierda.body.setVelocityY(300);
         } else if(this.cursor_W.isDown) {
