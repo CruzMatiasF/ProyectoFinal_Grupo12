@@ -4,7 +4,8 @@ import "./App.css";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-    return (
+    return ( 
+        //Se colocaron imagenes y botonea de cada juegos y colaboradores 
         <><div className="principal">
             <h1>ProjectoFinal</h1>
 
@@ -13,7 +14,7 @@ export default function Home() {
                 <img src={imagenJuego} alt="Juego" />
 
             </div><nav>
-                <ul>
+                <ul> 
                     <li>
                         <Link to="/Snake" className="botonJugar">Snake</Link>
                     </li>
@@ -21,7 +22,10 @@ export default function Home() {
                         <Link to="/Pong" className="botonJugar">Ping Pong</Link>
                     </li>
                     <li>
-                        <Link to="/MasJuegos" className="botonJugar">Arkanoid</Link>
+                        <Link to="/Dude" className="botonJugar">Dude</Link>
+                    </li>
+                    <li>
+                        <Link to="/Arkanoid" className="botonJugar">Arkanoid</Link>
                     </li>
                     <li>
                         <Link to="/Ahorcado" className="botonJugar">Ahorcado</Link>

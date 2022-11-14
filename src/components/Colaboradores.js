@@ -11,9 +11,6 @@ function Colaboradores() {
             <ClaseColaboradores
             img={listaC.img}Nombre={listaC.Nombre}Descripcion={listaC.Descripcion}></ClaseColaboradores>)}
             </Row>
-        </Conteiner>
-        
-        
-        
+        </Conteiner>     
     );
 } export default Colaboradores;
